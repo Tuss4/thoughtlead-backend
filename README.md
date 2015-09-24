@@ -7,7 +7,7 @@ Vokal Hack DayZZZZZZ
 + [AfterThoughts](#afterthoughts)
 + [AfterThought Details](#afterthought-details)
 
-**URL ROOT:** `/v1`
+**API URL ROOT:** `/v1`
 
 # Thoughts
 **GET:** `/thoughts/`
