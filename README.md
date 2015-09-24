@@ -126,3 +126,101 @@ Vokal Hack DayZZZZZZ
 **Status Codes:**
 + `204` if successful
 + `401` if unauthorized
+
+# AfterThoughts
+**GET:** `thoughts/:thought_id/afterthoughts/`
+
+**Note(s):**
++ Retrieve list of AfterThoughts (comments) on a Thought
++ ThoughtLeader must be authenticated
+
+**Response:**
+```json
+{
+  "results": [
+    {
+      "id": 1,
+      "thought": 2,
+      "thoughtleader": 78,
+      "creation_date": "2015-9-24",
+      "comment": "This was an enriching article. I feel smarter."
+    },
+    ...
+  ]
+}
+```
+
+**Status Codes:**
++ `200` if successful
++ `401` if unauthorized
+
+**POST:** `thoughts/:thought_id/afterthoughts/`
+
+**Note(s):**
++ Create a new afterthought
++ ThoughtLeader must be authenticated
+
+**Request:**
+```json
+{
+  "comment": "This was an enriching article I feel smarter."
+}
+```
+
+**Response:**
+```json
+{
+  "id": 1,
+  "thought": 2,
+  "thoughtleader": 78,
+  "creation_date": "2015-9-24",
+  "comment": "This was an enriching article. I feel smarter."
+}
+```
+
+**Status Codes:**
++ `201` if successful
++ `400` if bad request
++ `401` if unauthorized
+
+# AfterThought Details
+
+**PATCH:** `/thoughts/:thought_id/afterthoughts/:afterthought_id/`
+
+**Note(s):**
++ Update an afterthought
++ ThoughtLeader must be authenticated
+
+**Request:**
+```json
+{
+  "comment": "I didn't actually feel that smart. Actually I felt stupider."
+}
+```
+
+**Response:**
+```json
+{
+  "id": 1,
+  "thought": 2,
+  "thoughtleader": 78,
+  "creation_date": "2015-9-24",
+  "comment": "I didn't actually feel that smart. Actually I felt stupider."
+}
+```
+
+**Status Codes:**
++ `200` if successful
++ `400` if bad request
++ `401` if unauthorized
+
+**DELETE:** `thoughts/:thought_id/afterthoughts/:afterthought_id/`
+
+**Note(s):**
++ Delete an afterthought
++ ThoughtLeader must be authenticated
+
+**Status Codes:**
++ `204` if successful
++ `400` if bad request
++ `401` if unauthorized
