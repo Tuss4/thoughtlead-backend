@@ -116,3 +116,13 @@ Vokal Hack DayZZZZZZ
 + `200` if successful
 + `400` if bad request
 + `401` if unauthorized
+
+**DELETE:** `/thoughts/:thought_id/`
+
+**Note(s):**
++ Delete a thought
++ ThoughtLeader must be authenticated
+
+**Status Codes:**
++ `204` if successful
++ `401` if unauthorized
