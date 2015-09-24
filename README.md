@@ -2,6 +2,10 @@
 Vokal Hack DayZZZZZZ
 
 # Contents
++ [Thoughts](#thoughts)
++ [Thought Details](#thought-details)
++ [AfterThoughts](#afterthoughts)
++ [AfterThought Details](#afterthought-details)
 
 **URL ROOT:** `/v1`
 
